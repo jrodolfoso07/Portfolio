@@ -72,7 +72,7 @@ header a {
     transition: .2s;
 }
 
-header a:hover {
+header  nav.menu-desktop a:hover {
     color: #00FF08;
     transform: scale(1.05);
 }
@@ -81,9 +81,75 @@ header nav ul {
     list-style-type: none;
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px
+}
+
+/* ESTILO DO MENU MOBILE */
+
+.btn-open-menu i{
+    color: #00FF08;
+    font-size: 40px;
+}
+
+.menu{
+    background-color: #1F1A40;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu.abrir-menu{
+    width: 70%;
+}
+
+
+.menu.abrir-menu ~ .overlay-menu-1{
+    display: block;
+}
+
+.menu .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu .btn-fechar i{
+    color:#00FF08;
+    font-size: 30px;
+}
+
+.menu nav ul{
+    text-align: right;
+}
+
+.menu nav ul a{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu nav ul li a:hover{
+    background-color: #00FF08;
+    color: black;
+
+}
+
+.overlay-menu-1{
+    background-color: #000000df;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
 }
 
 
